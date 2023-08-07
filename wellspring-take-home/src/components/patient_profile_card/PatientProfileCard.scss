@@ -1,0 +1,54 @@
+@import url('../../App.css');
+
+.patient-profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  font-family: 'DMSans-Bold';
+
+  &__heading {
+    @extend .patient-profile-card;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 75%;
+
+    &__patient-photo {
+      height: 20vh;
+      width: 10vw;
+      background-color: #5287a4;
+    }
+
+    &__patient-name {
+      font-size: 1.25vw;
+    }
+  }
+
+  &__patient-details {
+    @extend .patient-profile-card;
+    flex-direction: row;
+    width: 75%;
+    font-size: 0.75vw;
+
+    &__container {
+      @extend .patient-profile-card__patient-details;
+      justify-content: center;
+      height: 3vh;
+      width: auto;
+      color: #495466;
+      background-color: #f1f3f6;
+      padding: 0 1vw 0 1vw;
+      border-radius: 20px;
+      border: none;
+      outline: 0;
+    }
+  }
+
+  &__hr {
+    border: none;
+    height: 0.25vh;
+    width: 75%;
+    background-color: #f5f6f9;
+  }
+}

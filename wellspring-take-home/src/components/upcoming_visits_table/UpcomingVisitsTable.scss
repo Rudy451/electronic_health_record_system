@@ -1,0 +1,105 @@
+@import url('../../App.css');
+
+.upcoming-visits-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__button-menu {
+    @extend .upcoming-visits-table;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 10vh;
+    width: 50%;
+    color: #495466;
+    margin-left: -10vw;
+    padding: 0 0 0 1vw;
+
+    &__tabs {
+      height: 3vh;
+      width: auto;
+      padding: 0 1vw 0 1vw;
+      font-family: 'DMSans-Bold';
+      font-size: 0.75vw;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+
+      &:focus {
+        color: #458fb9;
+        background-color: #f0f9ff;
+      }
+    }
+  }
+
+  &__appointment-entry {
+    @extend .upcoming-visits-table;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 10vh;
+    width: 75%;
+    font-size: 0.75vw;
+    font-family: 'DMSans-Bold';
+    margin: 0 0 2vh -0.25vw;
+
+    &__appointment-type-telehealth {
+      background-color: #36bffa;
+      color: #1786be;
+    }
+
+    &__appointment-type-in-person {
+      background-color: #bdb4fe;
+      color: #7c54f1;
+    }
+
+    &__logistics-info {
+      @extend .upcoming-visits-table__appointment-entry;
+      flex-direction: column;
+      justify-content: center;
+      width: 25%;
+      border-radius: 20px 0 0 20px;
+
+      &__arrival-time {
+        font-size: 1vw;
+        color: #fff;
+      }
+    }
+
+    &__appointment-info {
+      @extend .upcoming-visits-table__appointment-entry;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f9fc;
+      height: 9vh;
+      width: 75%;
+      padding: 1vh 0 0 1vw;
+      border-radius: 0 20px 20px 0;
+
+      &__details {
+        @extend .upcoming-visits-table__appointment-entry__appointment-info;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 5vh;
+        border-radius: 0;
+
+        &__patient-name {
+          font-size: 1vw;
+        }
+
+        &__patient-details {
+          font-size: 0.75vw;
+          color: #c4c8d0;
+        }
+      }
+
+      &__dots-horizontal {
+        padding: 0 1vw;
+        margin-top: -5vh;
+      }
+    }
+  }
+
+}

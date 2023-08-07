@@ -1,0 +1,49 @@
+.side-navigation-panel {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #fff;
+
+  &__logo {
+    position: absolute;
+    top: 5vh;
+    left: 4vw;
+    height: 5vh;
+    width: 7vw;
+  }
+
+  &__tab-menu {
+    position: absolute;
+    top: 30%;
+    left: 4vw;
+    width: 8vw;
+
+    &__tab-element {
+      height: 0.25vh;
+      display: flex;
+      align-items: center;
+      font-size: 1.25vw;
+      font-weight: 1000;
+      text-decoration: none;
+      padding: 2.5vw 1vw;
+      margin-left: -2vh;
+      color: #7b8395;
+
+      &.active {
+        color: #5287a4;
+        background-color: #daf1ff;
+        border-radius: 15px;
+      }
+
+      &__icon {
+        filter: invert(51%) sepia(19%) saturate(312%) hue-rotate(183deg) brightness(97%) contrast(85%);
+        margin-right: 0.75vw;
+
+        &.active {
+          filter: invert(50%) sepia(28%) saturate(628%) hue-rotate(157deg) brightness(92%) contrast(90%);
+        }
+      }
+    }
+  }
+}

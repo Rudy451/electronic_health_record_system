@@ -1,0 +1,108 @@
+@import url('../../App.css');
+
+.parent-container {
+  overflow: hidden;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  scrollbar-color:#e1f2fd;
+  scrollbar-width: thin;
+  height: 50vh;
+
+  /* WebKit-based browsers */
+  &::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+  &::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+  .container-with-scrollbar::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 6px; /* Rounded corners on the thumb */
+  }
+
+  .container-with-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+  }
+}
+
+.overflow-handler {
+  overflow: hidden;
+  height: 50vh;
+}
+
+.patients-table-patients {
+  &:hover {
+    color: #5287a4;
+    background-color:#daf1ff;
+    opacity: 0.5;
+  }
+}
+
+.patients-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 82%;
+  margin-left: 2vw;
+  font-family: 'DMSans-Bold';
+  font-size: 0.75vw;
+
+  &__patient-column {
+    @extend .patients-table;
+    height: 4.5vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__physician-name {
+      font-family: 'DMSans-Regular';
+      text-decoration: none;
+      color: #8890a0;
+    }
+  }
+
+  &__patient-status{
+    @extend .patients-table;
+    height: 3vh;
+    width: auto;
+    padding: 0 1vw 0 1vw;
+    border-radius: 20px;
+    border: none;
+    outline: 0;
+    overflow-y: auto;
+
+    &__visit-completed {
+      @extend .patients-table__patient-status;
+      color: #495466;
+      background-color: #f1f3f6;
+    }
+
+    &__started-training {
+      @extend .patients-table__patient-status;
+      color: #288e63;
+      background-color: #ecfaf3;
+    }
+
+    &__missing-documentation {
+      @extend .patients-table__patient-status;
+      color: #c6723f;
+      background-color: #fef9e9;
+    }
+  }
+
+  &__hr {
+    border: none;
+    height: 0.25vh;
+    width: 75%;
+    background-color: #f5f6f9;
+    margin-top: -2vh;
+  }
+}

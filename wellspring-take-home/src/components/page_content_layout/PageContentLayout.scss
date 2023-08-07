@@ -1,0 +1,56 @@
+@import url('../../App.css');
+
+.page-content-layout {
+  height: 100vh;
+  color: #3e4b5f;
+
+  &__greeting {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 5vh;
+    font-size: 1.75vw;
+    font-weight: 1000;
+    margin-left: 5vw;
+  }
+
+  &__patient-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__container {
+      height: 70vh;
+      width: 32vw;
+      background-color: #fff;
+      box-shadow: 0 2px 4px 1px #0000001A;
+      border-radius: 15px;
+
+      &__headings {
+        @extend .page-content-layout__patient-information;
+        height: 10vh;
+
+        &__title {
+          font-family: 'DMSans-Bold';
+          font-size: 1.5vw;
+        }
+
+        &__select-all {
+          font-size: 1.25vw;
+          text-decoration: none;
+          color: #5287a4;
+        }
+      }
+
+      &__hr {
+        width: 75%;
+        border: none;
+        height: 0.25vh;
+        background-color: #e1f2fd;
+        margin-top: -2vh;
+      }
+    }
+  }
+}
